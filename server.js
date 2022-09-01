@@ -225,3 +225,8 @@ function updateEmployee() {
       });
     });
 }
+
+function quit() {
+  connection.end();
+  process.exit();
+}
