@@ -68,5 +68,37 @@ connection.connect((err) => {
       });
   }
 
+  // Getting results from tables
 
+  function viewDepartment() {
+    // select from the db
+    let query = "SELECT * FROM department";
+    connection.query(query, function(err, res) {
+      if (err) throw err;
+      console.table(res);
+      startScreen();
+    });
+    // show the result to the user (console.table)
+  }
   
+  function viewRoles() {
+    // select from the db
+    let query = "SELECT * FROM role";
+    connection.query(query, function(err, res) {
+      if (err) throw err;
+      console.table(res);
+      startScreen();
+    });
+    // show the result to the user (console.table)
+  }
+  
+  function viewEmployees() {
+    // select from the db
+    let query = "SELECT * FROM employee";
+    connection.query(query, function(err, res) {
+      if (err) throw err;
+      console.table(res);
+      startScreen();
+    });
+    // show the result to the user (console.table)
+  }
